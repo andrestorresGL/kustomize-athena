@@ -1,0 +1,8 @@
+apiVersion: source.toolkit.fluxcd.io/v1beta1
+kind: HelmRepository
+metadata:
+  name: lotus-fullnode
+  namespace: lotus-kustomization
+spec:
+  interval: 1m
+  url: https://andrestorresgl.github.io/helm-charts
