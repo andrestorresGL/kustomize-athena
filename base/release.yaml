@@ -166,7 +166,7 @@ spec:
     persistence:
       journal:
         enabled: true
-        size: "200Gi"
+        size: "400Gi"
         accessModes:
           - ReadWriteOnce
         storageClassName: ""
@@ -184,13 +184,13 @@ spec:
             - ReadWriteOnce
           storageClassName: ""
         hotStore:
-          size: "100Gi"
+          size: "200Gi"
           accessModes:
             - ReadWriteOnce
           storageClassName: ""
       parameters:
         enabled: true
-        size: "150Gi"
+        size: "250Gi"
         accessModes:
           - ReadWriteOnce
         storageClassName: ""
