@@ -1,3 +1,6 @@
+release:
+  namespace: lotus-kustomization
+  releaseName: lotus-fullnode
 image:
   repository: filecoin/lotus-all-in-one
   pullPolicy: IfNotPresent
