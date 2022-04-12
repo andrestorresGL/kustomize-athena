@@ -184,13 +184,13 @@ spec:
             - ReadWriteOnce
           storageClassName: ""
         hotStore:
-          size: "200Gi"
+          size: "400Gi"
           accessModes:
             - ReadWriteOnce
           storageClassName: ""
       parameters:
         enabled: true
-        size: "250Gi"
+        size: "450Gi"
         accessModes:
           - ReadWriteOnce
         storageClassName: ""
