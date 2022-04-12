@@ -1,10 +1,10 @@
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 
-helmCharts:
-- name: lotus-fullnode
-  repo: https://andrestorresgl.github.io/helm-charts
-  version: 0.3.4
+helmChartInflationGenerator:
+- chartName: lotus-fullnode
+  chartRepoUrl: https://andrestorresgl.github.io/helm-charts
+  chartVersion: 0.3.4
   releaseName: lotus-fullnode
-  namespace: lotus-kustomization
-  valuesFile: values.yaml
+  releaseNamespace: lotus-kustomization
+  values: values.yaml
