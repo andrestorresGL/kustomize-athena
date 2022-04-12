@@ -172,6 +172,9 @@ spec:
         storageClassName: ""
       datastore:
         enabled: true
+        size: "500Gi"
+        accessModes:
+          - ReadWriteOnce
         # Please also enable splitstore in the daemonConfig section
         splitStoreEnabled: true
         # when easyReset is true, if `/var/lib/lotus/datastore/_reset` is present, all files under
