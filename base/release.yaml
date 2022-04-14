@@ -32,7 +32,7 @@ spec:
     image:
       repository: filecoin/lotus-all-in-one
       pullPolicy: IfNotPresent
-      tag: mainnet-v1.15.1 #v1.15.0
+      tag: nightly #v1.15.0
 
     # replicas will increase number of replicas for the statefulset of lotus daemons
     # it should never be used when supplying an external libp2p secret, or with wallets.
