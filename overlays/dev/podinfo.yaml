@@ -8,4 +8,4 @@ spec:
     image:
       repository: filecoin/lotus-all-in-one
       pullPolicy: IfNotPresent
-      tag: stable
+      tag: stables
