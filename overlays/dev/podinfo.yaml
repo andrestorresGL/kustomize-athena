@@ -1,23 +1,11 @@
-apiVersion: apps/v1
-kind: StatefulSet
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
 metadata:
-  name: {{ .Release.Name }}-lotus
-  labels:
-    app: lotus-fullnode-app
+  name: lotus-kustomization
+  namespace: lotus-kustomization
 spec:
-  template:
-    spec:
-      - name: temp-jwt
-        image: "{{ .Values.image.repository }}:stable"
-      - name: temp-libp2p
-        image: "{{ .Values.image.repository }}:stable"
-      - name: keystore-verifier
-        image: "{{ .Values.image.repository }}:stable"
-      - name: chain-import
-        image: "{{ .Values.image.repository }}:stable"
-      - name: debug
-        image: "{{ .Values.image.repository }}:stable"
-      - name: disputer
-        image: "{{ .Values.image.repository }}:stable"
-      - name: daemon
-        image: "{{ .Values.image.repository }}:stable"
+  values:
+    image:
+      repository: filecoin/lotus-all-in-one
+      pullPolicy: IfNotPresent
+      tag: stable
