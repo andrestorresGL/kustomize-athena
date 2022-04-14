@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: {{ .Release.Name }}-lotus
+  labels:
+    app: lotus-fullnode-app
+spec:
+  template:
+    spec:
+      - name: temp-jwt
+        image: "{{ .Values.image.repository }}:stable"
+      - name: temp-libp2p
+        image: "{{ .Values.image.repository }}:stable"
+      - name: keystore-verifier
+        image: "{{ .Values.image.repository }}:stable"
+      - name: chain-import
+        image: "{{ .Values.image.repository }}:stable"
+      - name: debug
+        image: "{{ .Values.image.repository }}:stable"
+      - name: disputer
+        image: "{{ .Values.image.repository }}:stable"
+      - name: daemon
+        image: "{{ .Values.image.repository }}:stable"
